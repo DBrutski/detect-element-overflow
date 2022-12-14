@@ -1,4 +1,6 @@
-const getRect = (element) => element.getBoundingClientRect();
+import getNestedBoundingClientRect from 'get-nested-bounding-client-rect';
+
+const getRect = (element) => getNestedBoundingClientRect(element);
 
 const detectElementOverflow = (element, container) => ({
   get collidedTop() {
